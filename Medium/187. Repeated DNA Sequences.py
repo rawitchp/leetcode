@@ -1,6 +1,7 @@
+
 class Solution(object):
     def findRepeatedDnaSequences(self, s):
-        """
+        """"
         :type s: str
         :rtype: List[str]
         """
@@ -9,10 +10,10 @@ class Solution(object):
         ans = []
         while start + 9 < len(s):
             string = s[start:start+10]
-            if(string in sub and string not in ans):
+            if(string in sub and sub[string] == 1):
                 sub[string] = 2
                 ans.append(string)
-            else:
+            elif(string not in sub):
                 sub[string] = 1
             start += 1
         return ans

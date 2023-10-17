@@ -6,7 +6,7 @@ class Solution(object):
         """
         dic = {}
         arr = []
-        max_num = False
+        max_num = 't'
         for i in nums:
             if dic.has_key(i):
                 dic[i] += 1
@@ -14,6 +14,6 @@ class Solution(object):
                 dic[i] = 1
             if dic.has_key(max_num) and dic[max_num] < dic[i]:
                 max_num = i
-            elif not max_num:
+            elif max_num == 't':
                 max_num = i
         return max_num

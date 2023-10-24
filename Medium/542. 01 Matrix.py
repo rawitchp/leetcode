@@ -13,7 +13,6 @@ class Solution(object):
 					queue.append((i, j)) 
 				else:
 					mat[i][j] = "*"
-        print(queue)
         for r, c in queue:
 			for dr, dc in directions:
 				row = r + dr
